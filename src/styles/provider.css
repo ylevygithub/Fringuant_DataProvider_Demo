@@ -1,0 +1,19 @@
+
+.center-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.valider_provider-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: black;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.valider_provider-btn:hover {
+  color: black;
+}

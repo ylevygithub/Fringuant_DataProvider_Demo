@@ -1,0 +1,457 @@
+/* globals.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+body {
+  /* background: linear-gradient(-45deg,  #ff0080, #8a63d2, #5d9cec, #32cd32); */
+  background: linear-gradient(-45deg,  white, white, white, white);
+  /* background: #8a63d2; */
+  background-size: 120% 120%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+  display: grid;
+  place-items: center;
+  border-radius: 5px;
+} 
+
+Button {
+  padding: 5px;
+  background-color: #405cf5;
+  border-radius: 6px;
+  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .1) 0 2px 5px 0, rgba(0, 0, 0, .07) 0 1px 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  font-family: -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Ubuntu, sans-serif;
+  height: 44px;
+  margin: 12px 0 0;
+  overflow: hidden;
+  transition: all .2s, box-shadow .08s ease-in;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+Button:focus {
+  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
+}
+
+.avoid_tooltip__overflow {
+  max-width: 200px; /* Adjust the max-width as needed */
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+.input_mes_new {
+  width: max-content;
+  white-space: pre-wrap; /* This allows line breaks */
+  overflow: hidden;
+  border: 1px solid #000;
+  color: #989898;
+  width: 75px;
+  height: 7px;
+  flex-shrink: 0;
+  text-align: center;
+  font-family: Hanken Grotesk;
+  font-size: 13px;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 12px; /* 183.333% */
+  letter-spacing: -0.5px;
+  background: #FFF;
+}
+
+.input_mes_new:hover {
+  color: black;
+}
+
+.red-placeholder {
+  color: red;
+}
+
+/* For cross-browser compatibility */
+.red-placeholder:-ms-input-placeholder {
+  color: red;
+}
+
+.red-placeholder::-ms-input-placeholder {
+  color: red;
+}
+
+.green-placeholder {
+  color: green;
+}
+
+/* For cross-browser compatibility */
+.green-placeholder:-ms-input-placeholder {
+  color: green;
+}
+
+.green-placeholder::-ms-input-placeholder {
+  color: green;
+}
+
+.input_mes {
+  width: 59px;
+  height: 25px;
+  /* background-color: #3498db; */
+  transition: background-color 0.5s ease;
+}
+.input_mes:hover {
+  background-color: #f5f5f5;
+  border: 2px solid white;
+}
+
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.dt__logo {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 40px;
+}
+
+.header_text {
+  text-align: center;
+}
+
+.title_home_page {
+  position: absolute;
+  text-align: center;
+  top: 15%; left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.mobile_view__title {
+  text-align: center;
+  margin-top: 20px;
+  /* padding: 20px; */
+}
+
+.mobile_view__connexionCard {
+  margin: 30px;
+  border-radius: 5px;
+  place-items: center;
+}
+
+.mobile_view__mensurationsCard {
+  margin: 10px;
+  border-radius: 5px;
+  place-items: center;
+}
+
+.mobile_view__button {
+  display: grid;
+  place-items: center;
+  border-radius: 5px;
+  margin-left: 80px;
+}
+.mobile_view__button-addprofile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.mobile_view__buttonMensurations {
+  display: grid;
+  place-items: center;
+  border-radius: 5px;
+}
+
+.mobile_view__buttonProfilPic {
+  padding: 16px;
+}
+
+.single-line-li-ifth {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Trois colonnes égales */
+  gap: 7px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.single-line-li {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 7px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.data-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.TooltipContent {
+  animation-duration: 0.9s;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.TooltipContent[data-side='top'] {
+  animation-name: slideUp;
+}
+.TooltipContent[data-side='bottom'] {
+  animation-name: slideDown;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.TooltipContentText {
+  color: #FFF;
+  background-color: #000;
+}
+
+
+.btn_importer {
+  margin-top: initial;
+  height: 39px;
+}
+
+.btn-size {
+  align-items: center;
+  padding: 10px 10px;
+  font-size: 13px;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  background-color: #000;
+}
+
+/* .separator {
+  height: 1px;
+  width: 20px;
+  background-color: #ccc;
+  margin: 0 10px;
+} */
+
+.container_capture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.capture_success {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.capture-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.global_verif__data-list {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.global_verif__single-line-li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+video {
+  max-width: none !important;
+  height: unset !important;
+}
+
+.div_webcam {
+  height: 600px;
+  width: 280px;
+}
+.webcam_style {
+  width: 100%;
+  height: 100%;
+}
+
+.webcam_and_icon-centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon_webcam {
+  margin-top: 20px;
+}
+
+.centered-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.context_done {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile_view__reconnexion-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: black;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.mobile_view__reconnexion-btn:hover {
+  color: black;
+}
+
+.dt_view__reconnexion-btn {
+  width: 400px;
+  height: 30px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: black;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.dt_view__reconnexion-btn:hover {
+  color: black;
+}
+
+/******Pour safari*******/
+/* Cacher les inputs avec opacity au lieu de visibility */
+.input-file {
+  opacity: 0; /* Rendre l'input transparent */
+  position: absolute; /* Positionner l'input de façon absolue */
+  z-index: -1; /* Placer l'input derrière le bouton */
+  width: 100%; /* S'assurer que l'input couvre le bouton */
+  height: 100%; /* S'assurer que l'input couvre le bouton */
+}
+
+.button-label {
+  position: relative; /* Positionner relativement pour superposer l'input */
+  cursor: pointer; /* Indiquer que le label est cliquable */
+  display: inline-block; /* Permettre le positionnement */
+  width: auto; /* Largeur auto pour s'adapter au texte */
+  /* Votre style existant pour le bouton */
+}
+
+.flex_row {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  width: 90px;
+}
+
+.button-container {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  padding: 10px 25px;
+  height: 80px; /* Assurez-vous que la hauteur est suffisante pour le séparateur */
+}
+
+#camera,
+#importer {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.separator {
+  height: 100%; /* Utilisez une hauteur relative pour s'assurer qu'il s'étend dans le conteneur */
+  width: 2px; /* Plus visible */
+  background-color: #ccc;
+  margin: 0 20px; /* Adjust spacing */
+}
